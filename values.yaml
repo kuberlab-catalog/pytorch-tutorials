@@ -19,25 +19,13 @@ tensorboard:
     name: Install Tensorboard
     kind: boolean
 
-src:
-  value: https://github.com/kuberlab/pytorch-examples
-  wizard:
-    name: "Source Code"
-    kind: git
-
-installExamples:
-  value: false
-  wizard:
-    name: Add examples
-    kind: boolean
-
 dataset:
- value: 'mnist'
- version: '1.0.0'
- workspace: 'kuberlab-demo'
- wizard:
-   name: "Dataset configuration"
-   kind: dataset
+  value: ''
+  version: ''
+  workspace: ''
+  wizard:
+    name: "Dataset configuration"
+    kind: dataset
 
 # Pip packages may be specified here in format that pip accepts.
 packages: []
