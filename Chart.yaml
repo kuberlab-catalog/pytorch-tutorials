@@ -1,4 +1,4 @@
-Description: PyTorch
+Description: PyTorch tutorials
 Engine: gotpl
 Home: http://kuberlab.com
 Icon: https://storage.googleapis.com/kuberlab-images/torch-logo.png
@@ -12,6 +12,6 @@ Keywords:
 Maintainers:
 - Email: agunin@kuberlab.com
   Name: Gunin Alexander
-Name: PyTorch
+Name: PyTorch tutorials
 Version: 1.0.0
 Type: mlapp-v2
