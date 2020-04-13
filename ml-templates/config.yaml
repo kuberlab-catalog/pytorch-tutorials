@@ -45,8 +45,8 @@ spec:
       images:
         gpu: "kuberlab/pytorch:{{.pytorch_version.value}}-gpu"
         cpu: "kuberlab/pytorch:{{.pytorch_version.value}}-cpu"
-      command: "jupyter nbconvert tutorials/beginner_source/transformer_tutorial.ipynb --execute --to html --output-dir $CODE_DIR --ExecutePreprocessor.timeout=-1"
-      workdir: "$CODE_DIR"
+      command: "pip install -r $CODE_DIR/tutorials/requirements.txt && cd $CODE_DIR && jupyter nbconvert tutorials/beginner_source/transformer_tutorial.ipynb --execute --to html --stdout --ExecutePreprocessor.timeout=-1 | python $SRC_DIR/submit_report.py"
+      workdir: "/"
       resources:
         accelerators:
           gpu: 0
@@ -124,3 +124,7 @@ spec:
     emptyDir:
       sizeLimit: 8096Mi
       medium: Memory
+  - gitRepo:
+      repository: https://github.com/kuberlab-catalog/pytorch-tutorials
+    name: src
+    subPath: pytorch-tutorials/src
