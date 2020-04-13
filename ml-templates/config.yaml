@@ -23,7 +23,7 @@ spec:
         gpu: "kuberlab/pytorch:{{.pytorch_version.value}}-gpu"
         cpu: "kuberlab/pytorch:{{.pytorch_version.value}}-cpu"
       command: >-
-        git clone https://github.com/kuberlab-catalog/PT-tutorials tutorials
+        git clone https://github.com/kuberlab-catalog/pytorch-tutorials-code tutorials
       workdir: "$CODE_DIR"
       resources:
         accelerators:
