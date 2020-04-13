@@ -46,7 +46,7 @@ spec:
         gpu: "kuberlab/pytorch:{{.pytorch_version.value}}-gpu"
         cpu: "kuberlab/pytorch:{{.pytorch_version.value}}-cpu"
       command: "jupyter nbconvert tutorials/beginner_source/transformer_tutorial.ipynb --execute --to html --output-dir $CODE_DIR --ExecutePreprocessor.timeout=-1"
-      workdir: "$SRC_DIR"
+      workdir: "$CODE_DIR"
       resources:
         accelerators:
           gpu: 0
